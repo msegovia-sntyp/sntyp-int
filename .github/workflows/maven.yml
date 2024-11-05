@@ -30,7 +30,7 @@ jobs:
       uses: sonatype/actions/evaluate@v1
       with:
         iq-server-url: https://sonatype.sonatype.app/platform
-        username: msegovia
+        username: msegovia@sonatype.com
         password: SntypCol2024@@
         application-id: testdata
         scan-targets: '**/*.jar'
@@ -40,7 +40,7 @@ jobs:
       if: ( success() || failure() ) && steps.evaluate.outputs.scan-id
       with:
         iq-server-url: https://sonatype.sonatype.app/platform
-        username: msegovia
+        username: msegovia@sonatype.com
         password: SntypCol2024@@
         application-id: testdata
         scan-id: ${{ steps.evaluate.outputs.scan-id }}
