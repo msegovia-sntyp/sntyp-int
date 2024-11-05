@@ -31,7 +31,7 @@ jobs:
       with:
         iq-server-url: https://sonatype.sonatype.app/platform
         username: msegovia@sonatype.com
-        password: SntypCol2024@@
+        password: SntypCol2024
         application-id: testdata
         scan-targets: '**/*.jar'
 
@@ -41,7 +41,7 @@ jobs:
       with:
         iq-server-url: https://sonatype.sonatype.app/platform
         username: msegovia@sonatype.com
-        password: SntypCol2024@@
+        password: SntypCol2024
         application-id: testdata
         scan-id: ${{ steps.evaluate.outputs.scan-id }}
         sbom-standard: spdx
