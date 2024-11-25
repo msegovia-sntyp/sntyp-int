@@ -27,7 +27,7 @@ jobs:
         
     - name: Run IQ CLI
       id: evaluate
-      uses: sonatype/actions/evaluate@v1
+      uses: sonatype/actions/evaluate@v1.1.0
       with:
         iq-server-url: https://sonatype.sonatype.app/platform
         username: ${{ secrets.SSA_USERNAME }}
