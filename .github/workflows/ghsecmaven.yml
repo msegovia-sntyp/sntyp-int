@@ -34,7 +34,7 @@ jobs:
         password: ${{ secrets.SSA_PASSWORD }}
         application-id: testdata
         scan-targets: '**/*.jar'
-        sarif-file: 'sarif-file'
+        sarif-file: 'sariffile'
         upload-sarif-file: 'true'
 
     - name: Fetch SBOM
@@ -42,8 +42,8 @@ jobs:
       if: ( success() || failure() ) && steps.evaluate.outputs.scan-id
       with:
         iq-server-url: https://sonatype.sonatype.app/platform
-        username: ${{ secrets.SSA_USERNAME }}
-        password: ${{ secrets.SSA_PASSWORD }}
+        username: ${{ secrets.IQ_USERNAME }}
+        password: ${{ secrets.IQ_PSWRD }}
         application-id: testdata
         scan-id: ${{ steps.evaluate.outputs.scan-id }}
         sbom-standard: spdx
