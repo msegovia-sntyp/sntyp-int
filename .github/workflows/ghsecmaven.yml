@@ -34,6 +34,8 @@ jobs:
         password: ${{ secrets.SSA_PASSWORD }}
         application-id: testdata
         scan-targets: '**/*.jar'
+        sarif-file: 'sarif-file'
+        upload-sarif-file: 'true'
 
     - name: Fetch SBOM
       uses: sonatype/actions/fetch-sbom@v1
