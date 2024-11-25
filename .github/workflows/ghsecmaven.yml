@@ -34,7 +34,7 @@ jobs:
         password: ${{ secrets.IQ_PSWRD }}
         application-id: testdata
         scan-targets: '**/*.jar'
-        sarif-file: 'sariffile'
+        sarif-file: 'sariffile.sarif'
         upload-sarif-file: 'true'
 
     - name: Fetch SBOM
